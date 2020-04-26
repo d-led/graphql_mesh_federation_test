@@ -1,0 +1,35 @@
+sources:
+    - name: Service1
+      handler:
+        graphql:
+            endpoint: http://localhost:5001/
+    - name: Service2
+      handler:
+        graphql:
+            endpoint: http://localhost:5002/
+additionalResolvers:
+  - ./src/mesh/additional-resolvers.js
+transforms:
+    - extend: | 
+        extend type Widget {
+            gadgets: [Gadget!]
+        }
+    # https://graphql-mesh.com/docs/transforms/federation
+    # can't make the stitched schema work yet
+    - federation: 
+        types:
+            # Ensure the root queries of this schema show up the combined schema
+            - name: Query
+              config:
+                extend: true
+            - name: Widget
+              config:
+                extend: true
+                keyFields:
+                    - id
+            - name: Gadget
+              config:
+                extend: true
+                keyFields:
+                    - id
+              # resolveReference: ???

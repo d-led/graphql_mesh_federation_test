@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@apollo/federation": "^0.14.1",
+    "@graphql-mesh/cli": "^0.1.10",
+    "@graphql-mesh/graphql": "^0.1.10",
+    "@graphql-mesh/handler-federation": "^0.1.10",
+    "@graphql-mesh/runtime": "^0.1.10",
+    "@graphql-mesh/transform-extend": "^0.1.10",
+    "@graphql-mesh/transform-federation": "^0.1.10",
+    "apollo-graphql": "^0.4.3",
+    "graphql": "^15.0.0"
+  }
+}
