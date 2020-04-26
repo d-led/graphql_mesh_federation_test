@@ -25,7 +25,7 @@ http://localhost:5002/playground/
 - Start the first Mesh
 
 ```
-cd gateway && arn graphql-mesh serve
+cd gateway && yarn install && yarn graphql-mesh serve
 ```
 
 &darr;
