@@ -1,5 +1,10 @@
 ## Trying out GraphQL Mesh
 
+### Issues
+
+- Urigo/graphql-mesh#301
+- Urigo/graphql-mesh#296
+
 ### Running it
 
 - Start the first service
