@@ -1,12 +1,12 @@
 {
   "dependencies": {
     "@apollo/federation": "^0.16.2",
-    "@graphql-mesh/cli": "^0.1.19",
-    "@graphql-mesh/graphql": "^0.1.19",
-    "@graphql-mesh/handler-federation": "^0.1.16",
-    "@graphql-mesh/runtime": "^0.1.19",
-    "@graphql-mesh/transform-extend": "^0.1.19",
-    "@graphql-mesh/transform-federation": "^0.1.19",
+    "@graphql-mesh/cli": "0.1.20-alpha-f8a123dc.0",
+    "@graphql-mesh/graphql": "0.1.20-alpha-f8a123dc.0",
+    "@graphql-mesh/handler-federation": "0.1.20-alpha-f8a123dc.0",
+    "@graphql-mesh/runtime": "0.1.20-alpha-f8a123dc.0",
+    "@graphql-mesh/transform-extend": "0.1.20-alpha-f8a123dc.0",
+    "@graphql-mesh/transform-federation": "0.1.20-alpha-f8a123dc.0",
     "apollo-graphql": "^0.4.4",
     "graphql": "^15.0.0"
   }

@@ -9,13 +9,13 @@ sources:
             endpoint: http://localhost:5002/
 additionalResolvers:
   - ./src/mesh/additional-resolvers.js
-transforms:
-    - extend: | 
+additionalTypeDefs: | 
         extend type Widget {
             gadgets: [Gadget!]
         }
     # https://graphql-mesh.com/docs/transforms/federation
     # can't make the stitched schema work yet
+transforms:
     - federation: 
         types:
             # Ensure the root queries of this schema show up the combined schema
