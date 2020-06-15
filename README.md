@@ -1,6 +1,6 @@
 ## Trying out GraphQL Mesh
 
-### Issues
+### Reproducing Issues
 
 - Urigo/graphql-mesh#301
 - Urigo/graphql-mesh#296
