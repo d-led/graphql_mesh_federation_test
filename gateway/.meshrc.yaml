@@ -2,21 +2,21 @@ sources:
     - name: Service1
       handler:
         graphql:
-            endpoint: http://localhost:5001/
+            endpoint: http://localhost:5001/graphql
     - name: Service2
       handler:
         graphql:
-            endpoint: http://localhost:5002/
+            endpoint: http://localhost:5002/graphql
 additionalResolvers:
   - ./src/mesh/additional-resolvers.js
-additionalTypeDefs: | 
+additionalTypeDefs: |
         extend type Widget {
             gadgets: [Gadget!]
         }
     # https://graphql-mesh.com/docs/transforms/federation
     # can't make the stitched schema work yet
 transforms:
-    - federation: 
+    - federation:
         types:
             # Ensure the root queries of this schema show up the combined schema
             - name: Query
