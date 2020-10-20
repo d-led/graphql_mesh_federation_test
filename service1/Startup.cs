@@ -19,15 +19,12 @@ namespace service1
             // enable InMemory messaging services for subscription support.
             // services.AddInMemorySubscriptionProvider();
 
-            // this enables you to use DataLoader in your resolvers.
-            services.AddDataLoaderRegistry();
-
             // Add GraphQL Services
-            services.AddGraphQL(SchemaBuilder.New()
+            services.AddGraphQLServer()
                 // enable for authorization support
                 // .AddAuthorizeDirectiveType()
                 .AddQueryType<Query>()
-                .ModifyOptions(o => o.RemoveUnreachableTypes = true));
+                .ModifyOptions(o => o.RemoveUnreachableTypes = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +33,7 @@ namespace service1
             app
                 .UseRouting()
                 .UseWebSockets()
-                .UseGraphQL()
+                .UseEndpoints(endpoints => endpoints.MapGraphQL())
                 .UsePlayground()
                 .UseVoyager();
         }
